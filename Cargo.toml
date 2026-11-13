@@ -1,0 +1,22 @@
+[package]
+name = "pcm-a10-fw"
+version = "0.1.0"
+edition = "2021"
+description = "Rust reimplementation of the Sony PCM-A10 firmware update protocol (MSC SCSI vendor commands)"
+license = "MIT OR Apache-2.0"
+repository = "https://example.invalid/pcm-a10-fw"
+
+[[bin]]
+name = "pcm-a10-fw"
+path = "src/main.rs"
+
+[lib]
+name = "pcm_a10_fw"
+path = "src/lib.rs"
+
+[dependencies]
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
